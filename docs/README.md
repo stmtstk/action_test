@@ -1,13 +1,12 @@
-## Welcome to GitHub Pages (docs)
+## Welcome to MITRE ATT&CK CSV data storage
 
-A csv file is [here]<attack-csv-data/v11.3/attack-pattern.csv>.
-
-A csv file is [here](attack-csv-data-doc/v11.3/attack-pattern.csv).
 
 |Version |attack-pattern-w-id.csv|attack-pattern.csv|
 |---|---|---|
-|v11.3|[o](docs/attack-csv-data/v11.3/attack-pattern-w-id.csv)|[o](docs/attack-csv-data/v11.3/attack-pattern.csv) |
-|v11.2|[o](docs/attack-csv-data/v11.2/attack-pattern-w-id.csv)|[o](docs/attack-csv-data/v11.2/attack-pattern.csv) |
+|v11.3|[o](attack-csv-data/v11.3/attack-pattern-w-id.csv)|[o](attack-csv-data/v11.3/attack-pattern.csv) |
+|v11.2|[o](attack-csv-data/v11.2/attack-pattern-w-id.csv)|[o](attack-csv-data/v11.2/attack-pattern.csv) |
+
+A csv file is [here](attack-csv-data-doc/v11.3/attack-pattern.csv).
 
 ----
 
