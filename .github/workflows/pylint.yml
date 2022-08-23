@@ -1,4 +1,4 @@
-name: Lint Code Base
+name: Pylint
 
 on:
   push:
@@ -8,23 +8,53 @@ on:
 
 jobs:
   build:
-    name: Lint Code Base
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+    - uses: actions/checkout@v3
+      with:
+       fetch-depth: 0
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+    - name: Analysing the code with pylint
+      run: |
+        pylint $(git ls-files '*.py')
 
-      - name: Lint Code Base
-        uses: github/super-linter/slim@v4
-        env:
-          #LINTER_RULES_PATH: /
-          VALIDATE_ALL_CODEBASE: false
-          # DEFAULT_BRANCH: main
-          FILTER_REGEX_INCLUDE: 'docs/attack-csv-data/.*/.*\.csv'
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Keep these validations in sync with the npm run lint script in package.json:
-          #VALIDATE_JAVASCRIPT_ES: true
-          #VALIDATE_MARKDOWN: true
+#name: Lint Code Base
+#
+#on:
+#  push:
+#    branches-ignore: [main]
+#  pull_request:
+#    branches: [main]
+#
+#jobs:
+#  build:
+#    name: Lint Code Base
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout Code
+#        uses: actions/checkout@v2
+#        with:
+#          fetch-depth: 0
+#
+#      - name: Lint Code Base
+#        uses: github/super-linter/slim@v4
+#        env:
+#         #LINTER_RULES_PATH: /
+#          VALIDATE_ALL_CODEBASE: false
+#          # DEFAULT_BRANCH: main
+#          FILTER_REGEX_INCLUDE: 'docs/attack-csv-data/.*/.*\.csv'
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          # Keep these validations in sync with the npm run lint script in package.json:
+#          #VALIDATE_JAVASCRIPT_ES: true
+#          #VALIDATE_MARKDOWN: true
