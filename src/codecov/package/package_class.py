@@ -16,3 +16,4 @@ class PackageClass (object):
         """ func_2 """
         print(f'Enter func_2 ({a_int})')
         return a_int
+
