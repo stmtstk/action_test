@@ -1,7 +1,5 @@
-""" Test for main module """
 
 class PackageClass (object):
-    """ PakcageClass """
 
     def __init__(self) -> None:
         """ dummy __init__ """
