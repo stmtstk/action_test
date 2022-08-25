@@ -25,8 +25,8 @@ jobs:
       env:
         LINTER_RULES_PATH: /
         VALIDATE_ALL_CODEBASE: false
-        #DEFAULT_BRANCH: main
+        DEFAULT_BRANCH: main
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # Keep these validations in sync with the npm run lint script in package.json:
-        VALIDATE_JAVASCRIPT_ES: true
-        VALIDATE_MARKDOWN: true
+        #VALIDATE_JAVASCRIPT_ES: true
+        #VALIDATE_MARKDOWN: true
