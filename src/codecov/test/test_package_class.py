@@ -1,6 +1,6 @@
 """ test.py for main.py"""
 import unittest
-from codecov.package.package_class import PackageClass
+from src.codecov.package.package_class import PackageClass
 
 
 class TestMethods(unittest.TestCase):
