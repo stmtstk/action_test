@@ -15,6 +15,10 @@ class TestMethods(unittest.TestCase):
         """ func_1, success """
         self.assertEqual(self.pc.func_1(10), 10)
 
+    #def test_func_11_success(self) -> None:
+    #    """ func_1, success """
+    #    self.assertEqual(self.pc.func_1(10), 10)
+
     #def test_func_1_fail(self) -> None:
     #    """ func_1, fail """
     #    self.assertEqual(self.pc.func_1(10), 20)
