@@ -31,12 +31,15 @@ jobs:
         run: |
           sh ./produce-all-attack-csv-files.sh
           sh ./produce-index.sh
+          mkdir ./pages_work
+          cp -p ./README.md  ./pages_work
+          cp -pr ./attack-csv-data ./pages_work
       - name: Setup Pages
         uses: actions/configure-pages@v1
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./pages_work
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
