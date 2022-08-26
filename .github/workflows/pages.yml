@@ -55,4 +55,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+      - name: Remove temp directory
+        run: |
+          rm -r ./pages_work
 
