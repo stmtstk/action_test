@@ -10,6 +10,7 @@ import sys
 from collections import defaultdict
 from typing import NewType, Any, List, Tuple, Dict, DefaultDict, Optional, cast
 
+
 URL_PREFIX = 'https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-'
 INPUT_CACHE = 'attack.json'
 OUTPUT_DIR = './attack-csv-data'
