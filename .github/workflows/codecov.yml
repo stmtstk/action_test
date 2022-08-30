@@ -1,3 +1,4 @@
+---
 name: CodeCov
 on:
   pull_request:

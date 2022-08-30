@@ -1,3 +1,4 @@
+---
 name: Artifact Test
 on:
   pull_request:
