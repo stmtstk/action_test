@@ -1,5 +1,5 @@
-''' Main Python Script '''
 #!/usr/bin/env python3
+''' Main Python Script '''
 
 import re
 import csv
@@ -34,9 +34,9 @@ def _load_attack() -> Optional[Attack]:
     :rtype: Optional[Attack]
     '''
     try:
-        with open(INPUT_CACHE) as f:
+        with open(INPUT_CACHE, 'r', encoding='utf-8') as f:
             return json.load(f)
-    except:
+    except IOError:
         return None
 
 
