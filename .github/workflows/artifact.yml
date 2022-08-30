@@ -13,14 +13,14 @@ jobs:
       PYTHON: '3.9'
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 0
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-    - name: Package csv files
-      uses: actions/upload-artifact@v3
-      with:
-        name: attack-csv-data-name
-        path: |
-            attack-csv-data/**
+      - name: Package csv files
+        uses: actions/upload-artifact@v3
+        with:
+          name: attack-csv-data-name
+          path: |
+              attack-csv-data/**
