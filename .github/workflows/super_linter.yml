@@ -24,7 +24,6 @@ jobs:
       - name: Lint Code Base
         uses: github/super-linter/slim@v4
         env:
-          #LINTER_RULES_PATH: /
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_PYTHON_BLACK: false
           VALIDATE_PYTHON_PYLINT: false
