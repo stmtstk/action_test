@@ -50,4 +50,4 @@ For example, the CSV file for attack-pattern SDO of ATT&CK version 11.3 WITHOUT 
 
 
 This project makes use of ATT&CK®  
-https&#58;//attack.mitre.org/resources/terms-of-use/
+`https://attack.mitre.org/resources/terms-of-use/`
